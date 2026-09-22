@@ -1,4 +1,3 @@
-<img width="2172" height="724" alt="image" src="https://github.com/user-attachments/assets/0c1a29cf-9c75-46dc-9f36-21a8253b2a3b" /># Dentate-gyrus graph-token VAE
 
 A graph-aware variational autoencoder for reconstructing raw single-cell gene
 counts. The model was developed on the dentate-gyrus train/test split used in
@@ -10,9 +9,9 @@ the source H5AD files.
 
 ## Architecture of the VAE 
 
-**ENCODER**
+**Encoder architecture**
 <img width="2172" height="724" alt="image" src="https://github.com/user-attachments/assets/b387d7a7-f71f-486f-aea3-5d2e80a91e95" />
-**DECODER**
+**Decoder architecure**
 <img width="2172" height="724" alt="image" src="https://github.com/user-attachments/assets/37161936-a56d-4002-b56e-1b5a33bc4448" />
 **More details**
 - Library-size-normalized `log1p` expression is encoded per gene.
