@@ -19,6 +19,7 @@ the source H5AD files.
   cell's library size.
 - Training uses a Negative Binomial likelihood, KL regularization, and a
   gene-wise Pearson-correlation objective.
+<img width="2172" height="724" alt="image" src="https://github.com/user-attachments/assets/b387d7a7-f71f-486f-aea3-5d2e80a91e95" />
 
 Optional architecture switches expose the ongoing ablations without changing
 the baseline: learned gene-ID residuals over pretrained embeddings,
