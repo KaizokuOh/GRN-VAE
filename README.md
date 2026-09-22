@@ -19,6 +19,8 @@ the source H5AD files.
 
 **-More details**
 - Library-size-normalized `log1p` expression is encoded per gene.
+- Fixed scGPT gene embeddings are projected from 512 to 96 dimensions; the
+  projection is learned jointly with the VAE.
 - A shared FiLM-GNN layer passes relation-specific messages over activation,
   repression, and self edges.
 - Learned queries pool gene states into `8 x 16` stochastic latent tokens.
@@ -35,10 +37,11 @@ relation-wise graph aggregation, and additional decoder refinement blocks.
 ## Benchmark 
 We run a comparison benchmark on the 3 metrics used by scLDM: MSE, NBLL, and gene-wise PCC. 
 scLDM predictions were first generated on the full dentate gyrus (~17,000 genes) using that full library size, and then only the 1,300 genes (normalized on the new library size) that we trained on were selected
-| Model | Test NB loss ↓ | Test MSE ↓ | Test gene-wise PCC ↑ |
+| Model | NB loss ↓ | Log-normalized MSE ↓ | Gene-wise PCC ↑ |
 |---|---:|---:|---:|
 | scLDM | 0.261572 | 0.878416 | 0.444961 |
-| **GRN-VAE** | **0.218760** | **0.607442** | **0.710087** |
+| GRN-VAE + learned gene identities | 0.241837 | 0.705122 | 0.534675 |
+| **GRN-VAE + scGPT embeddings** | **0.218760** | **0.607442** | **0.710087** |
 
 ## Installation
 
