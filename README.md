@@ -38,7 +38,7 @@ scLDM predictions were first generated on the full dentate gyrus (~17,000 genes)
 | Model | Test NB loss ↓ | Test MSE ↓ | Test gene-wise PCC ↑ |
 |---|---:|---:|---:|
 | scLDM | 0.261572 | 0.878416 | 0.444961 |
-| **GRN-VAE + scGPT embeddings** | **0.218760** | **0.607442** | **0.710087** |
+| **GRN-VAE** | **0.218760** | **0.607442** | **0.710087** |
 
 ## Installation
 
