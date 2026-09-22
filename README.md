@@ -32,6 +32,14 @@ Optional architecture switches expose the ongoing ablations without changing
 the baseline: learned gene-ID residuals over pretrained embeddings,
 relation-wise graph aggregation, and additional decoder refinement blocks.
 
+## Benchmark 
+We run a comparison benchmark on the 3 metrics used by scLDM: MSE, NBLL, and gene-wise PCC. 
+scLDM predictions were first generated on the full dentate gyrus (~17,000 genes) using that full library size, and then only the 1,300 genes (normalized on the new library size) that we trained on were selected
+| Model | Test NB loss ↓ | Test MSE ↓ | Test gene-wise PCC ↑ |
+|---|---:|---:|---:|
+| scLDM | 0.261572 | 0.878416 | 0.444961 |
+| **GRN-VAE + scGPT embeddings** | **0.218760** | **0.607442** | **0.710087** |
+
 ## Installation
 
 ```bash
